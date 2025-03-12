@@ -31,37 +31,54 @@
 // let l = 6
 // console.log( "l'aire du rectangle est :" , calculAireRectangle(L,l))
 //exercice 5 nbre pair 
-let nbre = 9
-function isEven(nbre){
-    if( nbre%2 == 0){
-        return true
-    }
-    else{
-        console.log("ce nombre est impair")
-        return false
-    }
-}
-console.log(isEven(nbre))
+// let nbre = 9
+// function isEven(nbre){
+//     if( nbre%2 == 0){
+//         return true
+//     }
+//     else{
+//         console.log("ce nombre est impair")
+//         return false
+//     }
+// }
+// console.log(isEven(nbre))
 //exercice 6
-let elt = 6
-function findElement( tab =[1,2,5,7,8] ,elt){
-    if (tab.includes(elt)){
-        return true
+// let elt = 6
+// function findElement( tab =[1,2,5,7,8] ,elt){
+//     if (tab.includes(elt)){
+//         return true
+//     }
+//     else {
+//         return false
+//     }
+// }
+// console.log(findElement(tab = [1,2,5,7,8] , elt))
+
+function findElement(table  = [], elt ){
+    for ( let i = 1 ; i<= table.length ; i++){
+        if(elt == table[i]){
+            return true
+        }
+    }
+    return false
+}
+const table = [1,2,3,7,6]
+console.log(findElement(table , 5))
+//exercice 7
+function fact(n){
+    let facto= 1
+    if(n>0){
+        for ( let i=1 ; i<=n ;i++){
+            facto = facto*i
+        }
+        return facto
+    }
+    else if(n==0 || n==1){
+        return 1
     }
     else {
         return false
     }
-}
-console.log(findElement(tab = [1,2,5,7,8] , elt))
-//exercice 7
-function fact(n){
-    let facto= 1
-
-    for ( let i=1 ; i<=n ;i++){
-        facto = facto*i
-    }
-    return facto
-
 }   
-let n =6
+let n =1
 console.log(fact(n))
